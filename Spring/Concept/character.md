@@ -55,7 +55,7 @@ public class ReuqustInfo{
 @requestMapping("/requestinfo")
 
 public void main(HTTPServeletRequest request){
-//여기서 request 에 톰캣이 담았던 정보들을 넘겨준다.
+//여기서 request 에 톰캣이 담았던 정보들을 넘겨줍니다.
 System.out.println(request.parameter("year");
 System.out.println(request.parameter("month");
 	}
@@ -107,11 +107,11 @@ setCharacterEncoding()
 
 하나의 pc에 여러개의 서버( email,file ,web) 가 존재한다면 IP주소만으로는 서버가 제공할 서버를 고르지 못합니다.
 그래서 필요한것은 서버의 Port입니다. 각 서버 ( email, file , web) 등 마다 개인적인 포트번호 존재 그 포트번호를 url에 입력하면 해당 서버를 선택하여 이동!
-웹서버의 기본 80 - 생략가능 , 8080은 생략불가
+웹서버의 기본 80 - 생략가능 , 8080은 생략불가능 입니다.
 
 # WAS에 대한 쉬운 설명 
 
 - WAS : 웹 어플레이케이션을 서비스하는 서버 
-- 쉽게 말하자면, 서버에 프로그램을 설치하고 클라이어트가 서버프로그램을 사용할 수 있도록 하는것 
-- 이렇게하는 이유는 과거에는 개인 PC에 전부 서버를 설치하고 사용했는데 Update할떄마다 서버 전부를 Update해야하는 비효율이 발생 
-- 원격서버만 업데이트 시킬 수 있다면 하나만 하고 클라이언트는 전부 편리하게 사용가능 
+- 쉽게 말하자면, 서버에 프로그램을 설치하고 클라이어트가 서버프로그램을 사용할 수 있도록 하는것 입니다. 
+- 이렇게하는 이유는 과거에는 개인 PC에 전부 서버를 설치하고 사용했는데 Update할떄마다 서버 전부를 Update해야하는 비효율이 발생했습니다. 
+- 원격서버만 업데이트 시킬 수 있다면 하나만 하고 클라이언트는 전부 편리하게 사용이 가능합니다.
