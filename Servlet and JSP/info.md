@@ -19,7 +19,21 @@
 서블릿에서 @ WebServlet = @ Controller + @ RequestMapping 과 같습니다.
  // WebServlet은 서블릿의 맵핑 URL주소이다 . 
  ```
+ # 서블릿의 규칙
  
+1. HttpServlet을 상속받아야 한다.  public class yb extends HttpServlet (고정)
+2. 서블릿에서는 service메소드가 항상 고정 (고정)
+``` java
+public void Service(HttpServletRequest request , HttpServletResponse response throws IoException)
+```
+
+- 서블릿과 Controller 를 비교해보면 굉장히 유사합니다. 하지만 Controller가 여러가지면에서 더욱 발전되어있습니다. 
+- 예를 들자면 Controller는 상속을 받지 않고 ,매개변수가 고정되어있지 않아 필요한것만 사용하면 됩니다.
  
- 
+ 서블릿의 과정 
+ ![캡처 2](https://user-images.githubusercontent.com/99226598/175276151-1824801f-02c7-4253-8696-abdf96b632c5.PNG)
+
+# 유효범위(Scope)와 속성(attribute)
+
+
 
