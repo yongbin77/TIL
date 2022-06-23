@@ -35,5 +35,16 @@ public void Service(HttpServletRequest request , HttpServletResponse response th
 
 # 유효범위(Scope)와 속성(attribute)
 
+서블릿 JSP의 유효범위와 속성을 알기 전 HTTP의 특징을 우선 알아두어야합니다.
+가장 중요한 특징은 HTTP는 상태정보를 저장하지 않는다는것입니다. (stateless) 
+그러므로 필요한게 상태저장소 이고 4개의 상태저장소가 존재합니다 .
 
+### pageContext 저장소
+- 읽기 쓰기가 가능하지만 다른 page에는 접근하지 못합니다.
+
+### application 저장소
+- 전체에서 접근 가능한 저장소입니다. 그러므로 보안에 취약합니다.
+
+###  session 저장소
+- 그래서 개별저장소인 session이 만들어졌습니다. 클라이언트 마다 하나의 개별저장소가 생긴것입니다. 
 
