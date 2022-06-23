@@ -33,12 +33,20 @@ public void Service(HttpServletRequest request , HttpServletResponse response th
  서블릿의 과정 
  ![캡처 2](https://user-images.githubusercontent.com/99226598/175276151-1824801f-02c7-4253-8696-abdf96b632c5.PNG)
 
+url 패턴
+@WebServle("/ name~") 하나말고 여러개가 등록가능합니다. ("/hello*") 누르면 맵핑에 따라 헬로우 뒤에 붙은 어떤단어 붙여도 url 화면 출력
+url 패턴이랑 여러개가 등록가능하며 url.pattern으로 연결되는 상황을 말합니다. 
+
 # 유효범위(Scope)와 속성(attribute)
 
 서블릿 JSP의 유효범위와 속성을 알기 전 HTTP의 특징을 우선 알아두어야합니다.
 가장 중요한 특징은 HTTP는 상태정보를 저장하지 않는다는것입니다. (stateless) 
+![HTTP로는 불가능](https://user-images.githubusercontent.com/99226598/175280120-2f5e4309-f9e2-45d6-8060-aff941b25cae.jpg)
 그러므로 필요한게 상태저장소 이고 4개의 상태저장소가 존재합니다 .
-
+map형식으로 저장 (key , value) 
+저장소에 값을 읽고 쓰기 위한 메서드 용어 
+- SetAttribute() : 쓰기(저장)
+- GetAttribute() : 읽기  
 ### pageContext 저장소
 - 읽기 쓰기가 가능하지만 다른 page에는 접근하지 못합니다.
 
@@ -47,4 +55,14 @@ public void Service(HttpServletRequest request , HttpServletResponse response th
 
 ###  session 저장소
 - 그래서 개별저장소인 session이 만들어졌습니다. 클라이언트 마다 하나의 개별저장소가 생긴것입니다. 
+- 클라이언트 마다 갖고 있는 저장소로 logout하면 개별저장소는 제거 됩니다
+- 만약 100만명의 회원이라면 100만개의 session이 존재하므로 서버에 부담이 큰 부작용이 존재합니다.
 
+### request 저장소
+- 객체 자체로 저장하는 request 저장소 
+- 요청이 처리되는 동안에만 존재하고 만약 다른 jsp로 넘기고 싶다면 forward를 통해 다른 page에 데이터를 명령합니다 .
+- 
+
+# filter
+
+서블릿이 3개의 클래스를 가동한다 할때 1.전처리 2.처리 3.후처리 이 묶음 3개가 있다면 1번과 3번은 중복이 됩니다.
