@@ -33,7 +33,7 @@ postMember() 메서드의 리턴타입은 String , 단 클라이언트 쪽에서
 
 RequestMapping + Getmapping 이 두가지가 합쳐져있습니다.
 
-
+# 작성한 코드 
 ```java
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
