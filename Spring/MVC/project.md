@@ -88,7 +88,7 @@ getorder() : 특정 주문정보를 클라이언트 쪽에 제공하는 핸들�
 이러한 문제를 해결하기 위해 
 (1) 클래스 레벨의 @Requestmapping 옆 produces삭제하고 
 (2) Json문자열이 map객체로 대체하여 key,value값을 넣어 요청을 받는것 입니다.
-
+- Map<Stirng,Stirng>의 겨웅 key,value 값이 모두 String이어야합니다, if key가 String이고 value 값이 다른타입의 데이터면 Object로 지정합니다
 Map객체를 리턴하게 되면 내부적으로 ' 이 데이터는 JSON형식의 응답데이터로 변환해야 되구나'라고 이해하며 json형식으로 자동으로 변환해줍니다.
 (3) 리턴값으로 JSON문자열을 리턴하는 부분을 ResponseEntity 객체로 바꾸는 것입니다.
 ```java
@@ -96,3 +96,6 @@ return new ResponseEntity<>(map,HTTPStatus.CREATED);
 
 // 위 프로그래밍의 의미는, ResponseEntity 객체를 생성하면서 생성자 파라미터로 Map과 HTTP응답상태를 함께 전달하는 것입니다. 즉 요청자에게 보여주는것
 //HTTP응답상태를 넣어주어 클라이언트 요청을 서버가 어떻게 처리했는지 알려줄 수 있어 원활한 소통을 가능케합니다.
+
+```
+
