@@ -75,3 +75,6 @@ public class MemberController {
     }
 }
 ```
+
+회원고객이 주문한 커피주문 정보를 서버에 등록해주는 postorder() 메서드
+- 고객이 주문한 커피에 필요한 정보: 어떤 고객이 어떤 커피를 주문했는지 ( 회원식별자 : memberId) 
