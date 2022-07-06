@@ -1,3 +1,6 @@
 # JPA(JAVA Persistence API)란?
 데이터 저장 , 조회 작업은 JPA를 거쳐 JPA구현체인 Hiberate ORM을 통해서 이루어집니다. Hiberat ORM은 JDBC API를 이용해 데이터베이스에 접근합니다.
 
+Persistence를 해석하면 영속성 지속성입니다. 영속성이란 단어가 쉽게 사용되는 단어가 아니니 지속성이라는 단어로 기억하면 조금더 와닿을겁니다.
+
+JPA의 P인 지속성이 오래지속하는것은 과연 무엇일까요 ?
