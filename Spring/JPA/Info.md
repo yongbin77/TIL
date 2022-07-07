@@ -32,5 +32,6 @@ Persistence를 해석하면 영속성 지속성입니다. 영속성이란 단어
 this.em = emFactory.createEntityManager(); // 엔티티매니저 팩토리의 매서드를 사용해 엔티티 Manager클래스의 객체를 얻을 수 있습니다.
 EntityManager 객체를 통해 JPA API메서드를 사용가능케 합니다.
 ```
-persist(XXXX) 메서드를 호출하면 영속성콘테스트 Member객체를 저장합니다. 
+persist(XXXX) 메서드를 호출하면 영속성콘테스트 Member객체를 저장합니다. > 1차캐시에 멤버저장 
+XXXX객체는 쓰기지연 SQL저장소에 Insert쿼리형태로 등록됩니다.
 find를 통해 영속성 컨텍스트에 멤버가 잘 저장되어있는지 확인할 수 있습니다( 첫번쨰 값: 조회할 엔티티타입, 두번쨰 값: 식별자값(엔티티) )
