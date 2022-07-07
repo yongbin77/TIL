@@ -4,5 +4,6 @@
 - @RequestMapping : 클라이언트 요청과 요청을 처리하는 핸들러메서드를 매핑해주는 역할, RequestMapping을 Controller클래스에 추가하며 클래스 전체에 사용하는 공통 URL설정 
 - @PostMapping : 클라이언트 요청데이터를 서버에 생성할떄 사용하는 애너테이션, 
 (GetMapping , PatchMapping..등) 클라이언트에서 요청 전송시, HTTP Method 타입을 동일하게 맞춰야 함 
+- @Configuration : Spring Bean 검색대상인 Configuration 클래스로 간주, Bean 애너테이션 (@Bean)추가된 매서드 검색 후 해당메서드에서 리턴하는 객체를 Bean으로추가 
 
 ```
