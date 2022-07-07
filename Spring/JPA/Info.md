@@ -9,3 +9,8 @@ Persistence를 해석하면 영속성 지속성입니다. 영속성이란 단어
 - 엔티티 클래스를 지속성 Context에 저장하면 지속성클래스내부의 1차캐시에 엔티티가 저장이 됩니다.
 
 ![117632455-1cc98600-b1b8-11eb-9db0-a6c460ea47dd](https://user-images.githubusercontent.com/99226598/177574593-78bc28f5-a4e8-4d6c-ba12-b0bd8bf2e5fd.png)
+
+특정 클래스에 @Configuration 애너테이션을 추가하면 Spring에서 Bean검색대상인 Configuration클래스로 간주해서, Bean애너테이션이 추가된 메서드를 검색 후 해당메서드에서
+리턴하는 객체를 Spring Bean으로 추가합니다.
+실행문쪽 CommndLineRunner는 스프링에서 제공하는 객체서비스입니다.
+
