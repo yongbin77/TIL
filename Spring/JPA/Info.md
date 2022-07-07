@@ -26,3 +26,11 @@ Persistence를 해석하면 영속성 지속성입니다. 영속성이란 단어
 @Generated Value : 식별자를 생성해줍니다, 쉽게 말하자면 식별자에 해당하는 멤버 변수에 @Generated Value를 추가하면 데이터베이스 테이블에서 기본기가 되는 식별자를  
                     자동으로 생성해줍니다.
                     ```
+
+- JPA영속성 콘테스트는 Entity Manager에 의해 관리되는데 EntityManager 클래스의 객체는 Entity ManagerFactory 객체를 Spring으로부터 DI받을 수 있습니다.
+```java
+this.em = emFactory.createEntityManager(); // 엔티티매니저 팩토리의 매서드를 사용해 엔티티 Manager클래스의 객체를 얻을 수 있습니다.
+EntityManager 객체를 통해 JPA API메서드를 사용가능케 합니다.
+```
+persist(XXXX) 메서드를 호출하면 영속성콘테스트 Member객체를 저장합니다. 
+find를 통해 영속성 컨텍스트에 멤버가 잘 저장되어있는지 확인할 수 있습니다( 첫번쨰 값: 조회할 엔티티타입, 두번쨰 값: 식별자값(엔티티) )
