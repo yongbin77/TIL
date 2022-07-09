@@ -12,6 +12,8 @@
 - @ResponseEntitiy : JSON으로 응답해줄떄 사용 ( ResponseEntity객체가 존재하기에 @Responsebody 애너태이션을 따로 설정해줄 필요는 없다)
 - @Getter,Setter : lombok라이브러리에서 제공하는 애너테이션, 각 멤버변수에 해당하는 getter/setter 메서드 일일이 작성하는 수고를 덜어줌
   (getter : 요청값 받아오기 , setter : 값을 설정하기 ) 라고 생각하면 쉬움 
-- 
+- @AllArgsConstructor : 클래스에 추가된 모든멤버 변수를 파라미터로 갖는 생성자를 자동으로 생성해줌
+- @NoArgsConstructor : 파라미터 없는 기본생성자 자동으로 생성
+- @ service : 서비스계층 및 클래스에 애너테이션 추가시 Spring Bean으로 등록 (@Restcontroller와 동일) 
 
 ```
