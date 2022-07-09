@@ -60,3 +60,5 @@ tx.commit() 을 호출하는 시점에 영속성컨텍스트에 저장되어 있
 
 
 ![KakaoTalk_20220709_232125081](https://user-images.githubusercontent.com/99226598/178109848-94053fa7-f4d2-41ff-94ad-af702ff390ee.jpg)
+
+![KakaoTalk_20220709_232256875](https://user-images.githubusercontent.com/99226598/178109904-6ea37188-76e7-4726-973f-0c0e7b771dae.jpg)
