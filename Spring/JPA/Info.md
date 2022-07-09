@@ -59,3 +59,4 @@ tx.commit() 을 호출하는 시점에 영속성컨텍스트에 저장되어 있
 - em.find(); : 1차 캐시에 해당 객체 있는지 조회, 없으면 테이블에 SELECT 쿼리 전송해서 조회 
 
 
+![KakaoTalk_20220709_232125081](https://user-images.githubusercontent.com/99226598/178109848-94053fa7-f4d2-41ff-94ad-af702ff390ee.jpg)
