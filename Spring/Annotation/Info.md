@@ -15,5 +15,5 @@
 - @AllArgsConstructor : 클래스에 추가된 모든멤버 변수를 파라미터로 갖는 생성자를 자동으로 생성해줌
 - @NoArgsConstructor : 파라미터 없는 기본생성자 자동으로 생성
 - @ service : 서비스계층 및 클래스에 애너테이션 추가시 Spring Bean으로 등록 (@Restcontroller와 동일) 
-
+- @ Requiredargs : 생성자를 자동으로 만들어 의존관계를 자동으로 설정해줌
 ```
