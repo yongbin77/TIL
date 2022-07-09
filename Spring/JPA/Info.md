@@ -50,6 +50,12 @@ EntitiyManager를 통해서 Transaction 객체를 얻어야 합니다 . JPA에�
 Member객체를 영속성 컨텍스트에 저장
 tx.commit() 을 호출하는 시점에 영속성컨텍스트에 저장되어 있는 member객체를 데이터베이스 table에 저장합니다.
 
-코드를 실행하면
+코드를 실행하면 tx.commit()을 했기에 member에 대한 Insert쿼리가 실행되어 '쓰기지연 SQL'에서 사라집니다.
+
+<꼭 기억해야할 코드 JPA코드> 
+
+- em.persist(); : 영속성 콘텍스트에 1차캐시에 엔티티클래스의 객체 저장, 쓰기지연SQL저장소에서 Insert쿼리 등록
+- tx.commit(); : 쓰기지연 SQL저장소에 등록된 Insert쿼리 실행되고, 실행된것은 SQL저장소에서 삭제
+- em.find(); : 1차 캐시에 해당 객체 있는지 조회, 없으면 테이블에 SELECT 쿼리 전송해서 조회 
 
 
