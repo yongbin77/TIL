@@ -36,3 +36,20 @@ persist(XXXX) 메서드를 호출하면 영속성콘테스트 Member객체를 �
 XXXX객체는 쓰기지연 SQL저장소에 Insert쿼리형태로 등록됩니다.
 find를 통해 영속성 컨텍스트에 멤버가 잘 저장되어있는지 확인할 수 있습니다( 첫번쨰 값: 조회할 엔티티타입, 두번쨰 값: 식별자값(엔티티) )
 - tip : em.persist(XXXX)를 호출할 경우, 영속성 컨텍스트에 xxxx 객체가 저장되지만 실제 테이블에 정보를 저장하지는 않습니다, 또한 실제 log에 insert쿼리에도 X
+
+## 영속성 컨텍스트와 테이블에 엔티티 저장
+
+만약에 회원정보 (Member)정보를 실제 테이블에 저장한다고 가정해보겠습니다.
+
+- 실제 테이블에 member정보 저장 = Member객체를 영속성컨텍스트 뿐만아니라 데이터베이스 Table에 저장
+
+EntitiyManager를 통해서 Transaction 객체를 얻어야 합니다 . JPA에서는 이 Transaction 객체를 기준으로 테이블에 저장합니다
+(this.tx = em.getTransaction();  -> transaction 객체 얻어서 담궈둔곳 : tx
+
+그후 , JpA에서는 Transaction을 시작하기 위해서는 tx.begin() 메서드를 먼저 호출해야합니다.
+Member객체를 영속성 컨텍스트에 저장
+tx.commit() 을 호출하는 시점에 영속성컨텍스트에 저장되어 있는 member객체를 데이터베이스 table에 저장합니다.
+
+코드를 실행하면
+
+
