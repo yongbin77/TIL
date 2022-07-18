@@ -1,5 +1,8 @@
 # Spring Annotation의 종류와 기능
 ```java
+- @SpringBootApplication: 스프링 부트는 기본적으로 이 어노테이션 기준으로 동작하도록 되어 있다. 스프링에서 필수적인 초기화를 담당하는 @EnableAutoConfiguration, @ComponentScan,     @Configuration 어노테이션이 함축, 이 클래스를 기준으로 빈 스캔을 하게 되며, 여기다가도 @Bean 어노테이션을 이용한 빈 정의도 가능
+- @EnableAutoConfiguration: 스프링 부트의 핵심 어노테이션으로, 여태까지 Spring boot 없이 XML이던 자바던 필수적으로 annotation-driven 이나 annotation-config 등... 
+  필수적으로 스프링에 세팅하는 왠만한 것들을 자동 설정하여 일단 돌아가게 하도록 도와주는 어노테이션
 - @RestController : Spring MVC에서 특정 클래스에 추가하면 해당 클래스가 REST API의 리소스를 처리하기 위한 API의 Endpoint로 동작함을 알림 (스프링빈으로 등록됨)
 - @RequestMapping : 클라이언트 요청과 요청을 처리하는 핸들러메서드를 매핑해주는 역할, RequestMapping을 Controller클래스에 추가하며 클래스 전체에 사용하는 공통 URL설정 
 - @PostMapping : 클라이언트 요청데이터를 서버에 생성할떄 사용하는 애너테이션, 
