@@ -23,6 +23,9 @@
 new ResponseEntity로 객체생성하는게 일반적인 방법
 return ResponseEntity<>(~,HttpStatus.~) 으로 사용됨
 응답 데이터를 래핑함으로써 조금 더 세련된 방식으로 응답 데이터를 생성
-
+- @RequestBody : HTTP요청데이터를 Body로 받을떄 사용하는 애너테이션 (DTO클래스 옆에 사용)
+DTO클래스 앞에 붙은 @RequestBody애너테이션은 JSON형식의 Requestbody를 DTO클래스의 객체로 변환
+즉, 클라이언트쪽에서 전해주는 RequestBody가 JSON형식이어야함
+Responsebody는 사용하지 않는데 그 이유는 ResponseEntity가 Responsebody를 포함하고 있기떄문
 
 ```
