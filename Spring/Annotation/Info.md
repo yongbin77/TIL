@@ -19,4 +19,10 @@
 - @NoArgsConstructor : 파라미터 없는 기본생성자 자동으로 생성
 - @ service : 서비스계층 및 클래스에 애너테이션 추가시 Spring Bean으로 등록 (@Restcontroller와 동일) 
 - @ Requiredargs : 생성자를 자동으로 만들어 의존관계를 자동으로 설정해줌
+- @ResponseEntity : 주로 @Controller, @RestController가 붙은 Controller클래스의 핸들러메서드에서 요청처리의 응답을 구성하는데 사용된다
+new ResponseEntity로 객체생성하는게 일반적인 방법
+return ResponseEntity<>(~,HttpStatus.~) 으로 사용됨
+응답 데이터를 래핑함으로써 조금 더 세련된 방식으로 응답 데이터를 생성
+
+
 ```
