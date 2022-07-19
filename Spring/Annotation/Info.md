@@ -30,5 +30,6 @@ Responsebody는 사용하지 않는데 그 이유는 ResponseEntity가 Responseb
 - @Email : 클라이언트 요청데이터에 이메일주소 포함여부 검증하는 유효성 검증 애너테이션
 - @valid : Dto클래스 옆에 붙어 memberDTO객체에 유효성 검증적용하는 애너티에션
 - @notBlank : 정보가 비어있지 않는지 검사 @notBlank(message="비어있으면안됩니다")로 사용가능
-
+- @pattern : 정규표현식에 매치되는것인지 확인
+  @patter(regexp = " " , message=" " )
 ```
