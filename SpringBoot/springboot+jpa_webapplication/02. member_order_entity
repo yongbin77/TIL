@@ -82,5 +82,5 @@ Enum 타입 모음
 public enum DeliveryStatus {
     READY,COMP
 }
-
+```
 
