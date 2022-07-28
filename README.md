@@ -1,7 +1,12 @@
 # Today I Learned(TIL)
 
-# Spring
+# 작성규칙
+- 해당 자료에 대한 정확한 내용을 기술한다.
+- 이해에 도움이 되기 위한 직접 그린 그림 또한 게시한다. 
+- 폴더와 파일명은 영문으로 작성한다.
+- 하루에 한번은 꼭 직접 코딩하고 그에 관한 지식을 기록한다.
 
+# Spring
 
 - IOC 
   - [의존성](https://github.com/yongbin77/TIL/blob/main/Spring/%EC%8A%A4%ED%94%84%EB%A7%81%EC%9D%B4%EB%9E%80%3F)
