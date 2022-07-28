@@ -1,0 +1,73 @@
+# Controller
+스프링MVC의 개념 
+> Spring MVC = 클라이언트의 '요청'을 편리하게 처리해주는 프레임워크
+
+### Controller에서 사용되는 애너테이션 
+
+- @RestController : 데이터의 반환시 view가 필요하지 않을떄 해당 데이터 처리시 JSON으로 응답을 하기 위해서는 해당 컨트롤러의 응답이 JSON임을 알려줘야 한다. 이를 @ResponseBody를 통해서 알려준다.
+여기서 RestController는 이 두개(Contorller+Responsebody)를 묶은 것으로 응답은 View가 아닌 데이터 위주의 응답 목적을 나타낸다.@Responsebody를 사용하지 않더라도 JSON으로 응답 가능
+
+- @RequestMapping : Contoller클래스 레벨에 추가하여 공통 URL 설정하는것
+
+- @PostMapping,GetMapping ({member-id}) : "/{member-id}"는 회원식별자를 의미, 클라이언트가 요청을 보낼떄 URI로 어떤 값을 지정하느냐에 따라 통적으로 바뀐다. 
+
+- @ResponseEntity : 주로 @Controller, @RestController가 붙은 Controller클래스의 핸들러메서드에서 요청처리의 응답을 구성하는데 사용된다
+new ResponseEntity로 객체생성하는게 일반적인 방법
+return ResponseEntity<>(~,HttpStatus.~) 으로 사용됨
+응답 데이터를 래핑함으로써 조금 더 세련된 방식으로 응답 데이터를 생성
+- @RequestBody : HTTP요청데이터를 Body로 받을떄 사용하는 애너테이션 (DTO클래스 옆에 사용)
+DTO클래스 앞에 붙은 @RequestBody애너테이션은 JSON형식의 Requestbody를 DTO클래스의 객체로 변환 
+즉, 클라이언트쪽에서 전해주는 RequestBody가 JSON형식이어야함
+Responsebody는 사용하지 않는데 그 이유는 ResponseEntity가 Responsebody를 포함하고 있기떄문
+----
+
+### DTO(Data Transfer Object)
+> DTO 사용이유: 요청데이터가 무수히 늘어나면 파라미터로 추가되는 @Requestpapram이 계속 늘어나며 코드가 길어지고 복잡해지는 비효율을 만듦
+클라이언트의 요청데이터를 하나의 객체로 모두 전달받을 수 있다면 코드가 굉장히 간결해지기에 DTO를 통해 데이터를 하나의 객체로 받는다.
+
+
+즉,DTO클래스는 요청데이터를 하나의 객체로 전달받는 역할 수행
+
+- DTO클래스 만드는 예시
+``` java
+
+//요청받을 변수를 작성하고 getter,setter를해서 데이터를 받고 설정한다
+public class MemberDto {
+    @Email
+    private String email;
+    private String name;
+    private String phone;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+}
+
+```
+- 사용방법
+```java
+public ResponseEntity postMember(MemberDto memberdto){
+.... return new ResponseEntity<>(memberdto,Httpstatus.CREATED)
+}
+
+```
