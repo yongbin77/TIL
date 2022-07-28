@@ -1,0 +1,86 @@
+## 코드하면서 공부하고 외워야할 부분 //로 설명 
+```java
+
+@Entity
+@Getter @Setter
+public class Member {
+    //id,이름,주소,이메일,일대다 매핑으로 테이블설계할거니까 주문을 갖고있어야함
+    //테이블에서 PK = MEMBER_ID를 설정하고 싶으면 Column을 줘서 pk 이름을 바꿔줘야함
+    //안바꿔주면 id그대로 테이블형성됨
+    // Member와 Order 클래스의 연관관계로 변경을 한다면 변경포인트가 2개이지만, 테이블에서는 orders하나만 포린키 갖고 바꿔줌
+    // 즉 둘중의 하나를 주인이라는 개념으로 잡아줌 (연관관계주인)
+    @Id @GeneratedValue
+    @Column(name = "member_id")
+    private Long id;
+
+    private String name;
+    @Embedded   //내장 타입을 포함했다라는 선언 , 타입Embedded로 넣으면 Embedded를 가진 객체의 필드를 한번에 전부 떙겨올 수 있음
+    private Address address;
+
+
+    //하나의 회원이 여러상품을 주문하기떄문에 일대다 관계
+    //나는 연관관계 거울이에요를 mappedBy로 선언 여기서 member는 orders테이블에있는 member필드에 의해 매핑된거야라는 뜻
+    //mappedBy를 적는순간 나는 연관관계주인이 아닌 거울일 뿐이다라고 선언하는것 , 즉 읽기전용이됨
+    @OneToMany(mappedBy = "member")
+    private List<Order> orders = new ArrayList<>();
+    
+    ---------
+    
+@Entity
+@Table(name = "orders")
+@Getter @Setter
+
+public class Order {
+    @Id @GeneratedValue
+    @Column(name = "order_id")
+    private Long id;
+
+    //회원과 관계설정+조인키 즉 외부키 설정해서 가져옴 ,쉽게생각해서 @ManyToOne과 @JoinColumn은 한 세트로 기억하자!
+    //여기서 값을 세팅하면 member_id 즉 fk값이 member를 변경함
+    @ManyToOne
+    @JoinColumn(name = "member_id")
+    private Member member;
+
+    //캐스캐이드란? 예를들면 Order안의 orderItem에다가 데이터를 넣어두고 Order를 저장하면 같이 저장됨
+    //원래면 persist(orderItemA), persist(orderItemB) ...하고 마지막에 persist(order)또해줘야하지만
+    //캐스케이드 올타입으로 하면 persist(order)만하면 한번에 다 저장할 수 있음
+    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
+    private List<OrderItem> orderItems = new ArrayList<>();
+
+    //orders테이블이 연관관계의 주인이 됨
+    //cacade 오더를 저장할떄 딜리버리도 같이 저장해줌 ,원래면 각각 딜리버리 persist하고 해줘야하지만 한번에 가능
+    @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JoinColumn(name = "delivery_id")
+    private Delivery delivery;
+
+    private LocalDateTime orderDate;
+    //enum타입을 사용할떄 @Enumerated(EnumType.STRING) 공식처럼 외우자 ,enum 타입은 직접데이터 테이블에 들어가는것이 아닌 테이블의 column이 되어준다.
+    @Enumerated(EnumType.STRING)    
+    private OrderStatus status; // 주문상태를 알려준다 (두개 넣을 예정 Order,cancel)
+
+
+    public void setMember(Member member) {
+        this.member = member;
+        member.getOrders().add(this);
+    }
+    public void addOrderItem(OrderItem orderItem) {
+        orderItems.add(orderItem);
+        orderItem.setOrder(this);
+    }
+    public void setDelivery(Delivery delivery) {
+        this.delivery = delivery;
+        delivery.setOrder(this);
+    }
+    
+    ------
+Enum 타입 모음
+
+    public enum OrderStatus {
+    ORDER,CANCEL
+}
+
+public enum DeliveryStatus {
+    READY,COMP
+}
+
+
