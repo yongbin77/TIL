@@ -1,0 +1,49 @@
+### Order Entitiy
+
+```java
+
+   //생성할떄 무조건 createOrder를 호출할 수 있게한다. 각각 set하지 않도록
+    // 복잡한 주문은 생성메서드가 있어서 강제로 넣을 수 있게 만들어주는게 좋음 , 생성메서드
+    // (...문법은 여러개 넘길떄 사용하는것)
+    //회원정보, 주문한 상품 ,배송 넘겨받음
+    //for (Object obj : files) -> for( A : B ) : B에서 차례대로 객체를 꺼내서 A에다가 넣겠다
+    //주문생성의 복잡한 비즈니스 로직을 한곳으로 다 완성시킨다.
+    public static Order createOrder(Member member,Delivery delivery,OrderItem...orderItems){
+        Order order = new Order();
+        order.setMember(member);  //파라미터로 넘어온 회원을 주문에 등록
+        order.setDelivery(delivery);
+        for(OrderItem orderItem:orderItems){
+            order.addOrderItem(orderItem);
+        }
+        //주문상태를 주문으로 강제로 해놓는다.
+        order.setStatus(OrderStatus.ORDER);
+        order.setOrderDate(LocalDateTime.now());
+        return order;
+    }  //이렇게하면 order와 관련된 모든 연관관계를 한번에 세팅하고 쫙 주문걸수 있음
+
+    //주문취소 비즈니스 로직
+    public void cancel(){
+     if(delivery.getStatus() == DeliveryStatus.COMP) {
+            throw new IllegalStateException("이미 배송완료된 상품은 취소가 불가능합니다.");
+         }
+
+        this.setStatus(OrderStatus.CANCEL); //주문을 취소로 바꾸어준다, 다음 for문을 돌며 수량을 올려준다
+        for(OrderItem orderItem:orderItems){
+                orderItem.cancel(); //주문상품에도 전부 캔슬을 해주어야한다.order한번 주문할떄 상품 2개주문하면
+                                    //orderitem은 2개가 생긴다. 2개 각각에 취소를 날려준다.
+        }
+    }    
+    
+    //전체 주문가격 조회 로직
+    public int getTotalPrice(){
+        //주문한 오더아이템을 전부 더하면된다 , 현재 나의 토탈 프라이스를 0으로 둔다.
+        int totalPrice = 0;
+        for(OrderItem orderItem:orderItems){
+            totalPrice =+ orderItem.getTotalPrice();
+        }
+        return totalPrice;
+    }
+    
+    ```
+    
+    ### orderitem
