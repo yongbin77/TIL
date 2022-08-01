@@ -65,15 +65,12 @@ git push origin master
 
 3.내 브렌치에 소스코드 업데이트하기 (가지친다고 생각) 
 
-> git add .
-> git commit -m "first commit"
-> git push origin 브렌치이름
-마스터 브렌치에 소스 가져오기(pull)
+> git add . -> git commit -m "first commit" -> git push origin 브렌치이름
 
-git pull origin master
-pull을 하기전에는 기존에 소스코드들을 commit을 먼저 해놔야 한다 (2탄 강의참조)
+4. 마스터 브렌치에 소스 가져오기(pull)
+> git pull origin master
+pull을 하기전에는 기존에 소스코드들을 commit을 먼저 해놔야 한다 
 
-브렌치끼리 이동하는 법
-
-git checkout 브렌치이름
-강의에서 소개하진 않았지만 내가 내 브렌치에서 마스터 브렌치로 이동을 하고 싶거나 다른 브렌치로 이동하고싶으면 해당 명령어를 쓰면 된다
+5. 브렌치끼리 이동하는 법
+> git checkout 브렌치이름
+내가 내 브렌치에서 마스터 브렌치로 이동을 하고 싶거나 다른 브렌치로 이동하고싶으면 해당 명령어를 쓰면 된다
