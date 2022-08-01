@@ -14,3 +14,70 @@
 > Git은 이러한 문제를 해결해준다. Git이 관리하는 디렉토리(폴더)에 어떤 문서를 만들면 Git으로 그 문서의 버전을 관리할 수 있다. 이후 해당 문서를 수정할 때마다 언제 어떤 부분이 어떻게 수정되었는지에 대해 Git이 상세히 기록해준다. 
  추후 이전의 버전으로 돌아가야 할 필요가 생기면 Git이 기록해준 내용들을 확인하고 돌아가고자 하는 이전 버전을 선택해 손쉽게 버전을 되돌릴 수 있다.
  또한 백업까지 가능해 파일이 삭제되었을떄도 다시 원 상태로 복구시킬 수 있는 여러가지의 장점을 지니고있다. 마지막으로 git은 여러명과 협업을 진행 할 수 있다. 
+
+git 명령어
+
+Github에 처음 코드 업로드하기 🏋️‍♂️
+초기화
+
+git init
+추가할 파일 더하기
+
+git add .
+.(점) 은 모든 파일이라는 뜻, 선택적으로 올리고 싶으면 add뒤에 파일 이름 붙여주면 됨 (예. git add index.html)
+
+상태 확인 (선택사항)
+
+git status
+히스토리 만들기
+
+git commit -m "first commit"
+-m 은 메세지의 준말로 뒤에 “” 안에 주고싶은 히스토리 이름을 주면 됨 (즉, 구지 first commit일 필요가 없다는 뜻^^)
+
+Github repository랑 내 로컬 프로젝트랑 연결
+
+git remote add origin ~~~~
+
+
+잘 연결됬는지 확인 (선택사항)
+
+git remote -v
+내가 연결한 주소값이 잘 뜨면 성공!🎇
+
+Github로 올리기
+
+git push origin master
+master 자리에는 branch이름이 들어가면 됨 branch이름이 main라하면 git push origin main 이라고 써야함
+
+Github에 계속 업데이트 하는법 🤹‍♂️
+추가할 파일 더하기
+git add .
+히스토리 만들기
+git commit -m "first commit"
+Github로 올리기
+git push origin master
+내 컴퓨터에 소스코드를 업데이트를 하고 싶으면 이 세개의 스텝만 계속 반복하면 됨.
+
+Github로 팀프로젝트 하는법 👨‍👩‍👧‍👦
+Github에서 소스코드 다운로드
+
+git clone 주소 폴더이름
+주소는 깃허브에서 들고와야함
+폴더이름은 선택사항이다 (즉 없어도됨) 폴더이름을 줄경우에는 그 폴더가 새로 생성이 되면서 그 안에 코드들이 다운로드가 되고, 폴더이름을 안줄경우엔 깃허브 프로젝트 이름으로 폴더가 자동으로 생기고 그안에 코드들이 다운로드된다.
+Github에서 내 브렌치(branch)만들기
+
+git checkout -b 브렌치이름
+내 브렌치에 소스코드 업데이트하기
+
+git add .
+git commit -m "first commit"
+git push origin 브렌치이름
+마스터 브렌치에 소스 가져오기(pull)
+
+git pull origin master
+pull을 하기전에는 기존에 소스코드들을 commit을 먼저 해놔야 한다 (2탄 강의참조)
+
+브렌치끼리 이동하는 법
+
+git checkout 브렌치이름
+강의에서 소개하진 않았지만 내가 내 브렌치에서 마스터 브렌치로 이동을 하고 싶거나 다른 브렌치로 이동하고싶으면 해당 명령어를 쓰면 된다
