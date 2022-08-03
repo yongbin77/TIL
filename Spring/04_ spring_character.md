@@ -22,8 +22,13 @@
 
 @ResponseEntitiy: HTTP Entity의 확장클래스로서 HTTPStatus 상태코드를 추가한 전체 Http응답으로 표현
 - controller or RestController클래스 붙은것의 요청처리 응답으로 구성하는데 사용된다.
+- return 값으로 new 객체 생성하여 <> () 담아서 보내준다
+- 반환값으로 ResponseEntitiy를 선언해준다.
 
 
+
+
+-----------
 Controller 클래스에 자주사용되는 애너테이션에 관한 나의 궁금증과 답변 
 
 @Restcontroller - Rest api를 처리하기 위한 api엔드포인트로 동작 (class 위 상단에 붙어짐)
