@@ -20,6 +20,9 @@
 ### 핸들러 메서드 
 > controller클래스안에 구현된 '요청처리메서드' 
 
+@ResponseEntitiy: HTTP Entity의 확장클래스로서 HTTPStatus 상태코드를 추가한 전체 Http응답으로 표현
+- controller or RestController클래스 붙은것의 요청처리 응답으로 구성하는데 사용된다.
+
 
 Controller 클래스에 자주사용되는 애너테이션에 관한 나의 궁금증과 답변 
 
@@ -36,4 +39,17 @@ Restcontroller는 data를 반환하기 위해 주로 사용된다 -> Responsebod
 - pathvariable은 예를 들자면 @Getmapping({"member-id"}) 아이디를 찾는 요청 값 같은 사람마다 다른 아이디를 동적인 요청으로 받아들일떄 사용 
 - {"  "} 어떤것을 넣느냐에 따라 동적인 값으로 바뀌어 메서드 수행
 
-public 
+이 두가지의 애너테이션을 활용해 메서드 만드는 방법 
+```java
+1. RequestParam
+public String car(@RequsetParam("carname") String carname){ ...}
+
+2. pathvariable 
+@Getmapping({"member-id"})
+public String findmember(@Pathvariable("member-id")String memberid) {...}
+//Getmapping에 있는 동적인 값과 Pathvariable의 값은 같아야한다 그래야 에러가 안남  
+// 뒤에있는 String에 요청값들을 담는다.
+```
+
+
+
