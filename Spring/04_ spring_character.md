@@ -20,6 +20,9 @@
 ### 핸들러 메서드 
 > controller클래스안에 구현된 '요청처리메서드' 
 
+
+Controller 클래스에 자주사용되는 애너테이션에 관한 나의 궁금증과 답변 
+
 @Restcontroller - Rest api를 처리하기 위한 api엔드포인트로 동작 (class 위 상단에 붙어짐)
 
 1. question : RestController와 Controller의 차이점은 무엇일까 ?
@@ -28,4 +31,9 @@ Restcontroller는 data를 반환하기 위해 주로 사용된다 -> Responsebod
 즉 Restcontroller : Controller + Responsebody.
 
 
-2. question : 
+2. question : 클라이언트 요청을 받는 RequestParam과 Pathvariable의 차이점이 뭐지?
+- anwer : Requestparam은 쿼리파라미터 "?"를 기준으로 key와 value값(요청값)을 받기위해서 사용되는 것,
+- pathvariable은 예를 들자면 @Getmapping({"member-id"}) 아이디를 찾는 요청 값 같은 사람마다 다른 아이디를 동적인 요청으로 받아들일떄 사용 
+- {"  "} 어떤것을 넣느냐에 따라 동적인 값으로 바뀌어 메서드 수행
+
+public 
