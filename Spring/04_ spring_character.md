@@ -13,8 +13,18 @@
 
 
 -------------
-고객의 요청을 받아들일 controller클래스가 필요한데 그 controller클래스안에는 이렇게 구성될 수 있다.
+고객의 요청(리소스)을 받아들일 controller클래스가 필요한데 그 controller클래스안에는 이렇게 구성될 수 있다.
+리소스: 정보
 
 ### 핸들러 메서드 
 > controller클래스안에 구현된 '요청처리메서드' 
 
+@Restcontroller - Rest api를 처리하기 위한 api엔드포인트로 동작 (class 위 상단에 붙어짐)
+
+1. question : RestController와 Controller의 차이점은 무엇일까 ?
+- anwer : HTTP Responsebody가 생성되는 방식과 사용목적이 다르다 . controller는 주로 view를 반환하기 위해 사용,
+Restcontroller는 data를 반환하기 위해 주로 사용된다 -> Responsebody를 활용 ( json으로 자동 convert해준다.)
+즉 Restcontroller : Controller + Responsebody.
+
+
+2. question : 
