@@ -35,7 +35,7 @@ dependencies {
 
 요청데이터 중 body에 해당하는것을 RequestBody라 한다
 
-> Json형식일 경우 핸들러메서드 @Requestbody를 붙인다 ( post,put,patch 형식일 경우, 이 http메세지들은 바디에 내용이 있기떄문)
+> Json형식일 경우 핸들러메서드 각각에 @Requestbody를 붙인다 ( post,put,patch 형식일 경우, 이 http메세지들은 바디에 내용이 있기떄문)
 
 @RequestBody: Json형식의 Requestbody(요청데이터)가 Dto클래스의 객체로 변환시켜준다!!!
 여기서 질문! Responsebody는 왜 추가 안하나?
