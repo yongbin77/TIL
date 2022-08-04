@@ -40,8 +40,8 @@ dependencies {
 @RequestBody: Json형식의 Requestbody(요청데이터)가 Dto클래스의 객체로 변환시켜준다!!!
 
 
-여기서 질문! Responsebody는 왜 추가 안하나?
+#### 여기서 질문! Responsebody는 왜 추가 안하나?
 
-anwer: dto클래스를 다시 Json으로 바꿔주는것 ResponseEntity가 대신 수행해줌
+anwer: dto클래스를 다시 Json으로 바꿔주는것은  @RestController안에 속해있는 responsebody가 대신 수행하기기 추가 할 필요 없다!
 
 
