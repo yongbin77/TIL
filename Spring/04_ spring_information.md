@@ -18,7 +18,7 @@
 리소스: 정보
 
 ### 핸들러 메서드 
-> controller클래스안에 구현된 '요청처리메서드' 
+> controller클래스안에 구현된 '요청처리 메서드' 
 
 @ResponseEntitiy: HTTP Entity의 확장클래스로서 HTTPStatus 상태코드를 추가한 전체 Http응답으로 표현
 - controller or RestController클래스 붙은것의 요청처리 응답으로 구성하는데 사용된다.
