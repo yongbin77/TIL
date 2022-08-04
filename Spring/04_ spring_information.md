@@ -23,7 +23,7 @@
 @ResponseEntitiy: HTTP Entity의 확장클래스로서 HTTPStatus 상태코드를 추가한 전체 Http응답으로 표현
 - controller or RestController클래스 붙은것의 요청처리 응답으로 구성하는데 사용된다.
 - return 값으로 new 객체 생성하여 <> () 담아서 보내준다
-- 반환값으로 ResponseEntitiy를 선언해준다.
+- 반환값,타입으로 ResponseEntitiy를 선언해준다.
 
 
 
