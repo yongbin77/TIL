@@ -5,7 +5,7 @@
 ![KakaoTalk_20220803_225357195](https://user-images.githubusercontent.com/99226598/182625757-d349d27a-4d58-4302-8e41-b13225aa3adf.jpg)
 
 
-Entity클래스는 dto클래스에서 요청받는 값 (필드)를 전부 기입하여 생성한다
+#### Entity클래스는 DTO클래스에서 요청받는 값 (필드)를 전부 기입하여 생성
 
 ### DI 사용
 
