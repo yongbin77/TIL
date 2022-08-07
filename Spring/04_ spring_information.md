@@ -25,13 +25,10 @@
 - return 값으로 new 객체 생성하여 <> () 담아서 보내준다
 - 반환값으로 ResponseEntitiy를 선언해준다.
 
-
-
+@Restcontroller: Rest api를 처리하기 위한 api엔드포인트로 동작 (class 위 상단에 붙어짐)
 
 -----------
-Controller 클래스에 자주사용되는 애너테이션에 관한 나의 궁금증과 답변 
-
-@Restcontroller - Rest api를 처리하기 위한 api엔드포인트로 동작 (class 위 상단에 붙어짐)
+### Controller 클래스에 자주 사용되는 애너테이션에 관한 나의 궁금증과 답변 
 
 1. question : RestController와 Controller의 차이점은 무엇일까 ?
 - anwer : HTTP Responsebody가 생성되는 방식과 사용목적이 다르다 . controller는 주로 view를 반환하기 위해 사용,
