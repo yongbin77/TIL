@@ -10,7 +10,9 @@ public interface MessageRepository extends CrudRepository<Message, Long> {
 > 데이터 액세스 계층에서 데이터베이스와의 연동을 담당하는 Repository인 Repository 인터페이스
 > 특이한 것은 CrudRepository라는 인터페이스를 상속하고 있고, 이 CrudRepository의 제너릭 타입이 <Message, Long>으로 선언
 
-CrudRepository<Message, Long> 와 같이 제너릭 타입을 지정해줌으로써 " Message 엔티티 클래스 객체에 담긴 데이터를 데이터베이스 테이블에 
+CrudRepository<Message, Long> 와 같이 제너릭 타입을 지정해줌으로써 
+
+ " Message 엔티티 클래스 객체에 담긴 데이터를 데이터베이스 테이블에 
 생성 또는 수정하거나 데이터베이스에서 조회한 데이터를 Message 엔티티 클래스로 변환" 
 <Message, Long>에서 Long은 Message 엔티티 클래스의 멤버 변수 중에 식별자를 의미하는 @Id 라는 애너테이션이 붙어있는 멤버 변수의 데이터 타입
 
