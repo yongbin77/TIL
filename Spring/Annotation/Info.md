@@ -32,4 +32,5 @@ Responsebody는 사용하지 않는데 그 이유는 ResponseEntity가 Responseb
 - @notBlank : 정보가 비어있지 않는지 검사 @notBlank(message="비어있으면안됩니다")로 사용가능
 - @pattern : 정규표현식에 매치되는것인지 확인
   @patter(regexp = " " , message=" " )
+  -@BeforeEach : 테스트 케이스 실행전 전처리 과정을 해주는 애너테이션, 테스트 메서드 실행 전 테스트메서드 숫자만큼 초기화를 하며 먼저 수행됨 
 ```
