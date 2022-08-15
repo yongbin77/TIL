@@ -3,7 +3,7 @@
 
 - API : API는 프로그램 혹은 시스템 간의 통신하는 창구, 즉 프로그램들이 서로 상호작용하는 것을 도와주는 매개체
 
-### 예시로 api와 endpoint에 대한 전반적인 이해 
+### 예시로 API와 ENDPOINT에 대한 전반적인 이해 
 
 ![예시1](https://user-images.githubusercontent.com/99226598/184570452-70ebdf67-6c2c-4bab-be75-41e92100ce45.png)
 
