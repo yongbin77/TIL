@@ -34,6 +34,8 @@ Anwer: 관계형 데이터베이스 사진 2에는 어느날 갑자기 cs101 수
 보통은 teacher테이블의 클래스에 아이디를 직접 적지않고  수업클래스의 고유한 값인 id값을 적는다 .
 이러한 id값은 고유한 id라는 필드가 있고, 이 테이블의 레코드를 가르킨다 이러한 것을 기본키라고 한다 (변하지 않는 값)
 
+
+
 ![](https://velog.velcdn.com/images/yongzzx/post/66a6ec01-2393-4b38-932e-9c2cce9ce0e7/image.PNG)
 
 외부 키를 받아서 적는데 이러한 키를 외래키(foreign key)라 한다.
