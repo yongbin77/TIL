@@ -7,3 +7,17 @@
 ### 브랜치 생성 / 및 변경 (git switch)
 
 브랜치를 생성할 때는 생성(create)의 의미로 -c 를 붙여줘야 하고, 기존에 있는 브랜치로 옮길 때는 붙이지 않아도 된다.
+
+> yb라는 브랜치를 새로 생성하는 경우 -c를 붙인다. git switch -c feature
+
+### checkout이라는 명령어도 사용할 수 있다. git checkout -b feature
+
+# 기존에 있던 main 브랜치로 HEAD를 변경하려면, -c를 붙이지 않습니다.
+git switch main
+git checkout main
+
+
+> git switch yb 와 git checkout -b yb 의 차이가 무엇이냐면 
+> git checkout -b yb : '새로운' yb 브랜치를 생성하고 switch한다.
+> git switch yb : '기존' yb브랜치로 switch 한다 .
+
