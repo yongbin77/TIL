@@ -21,3 +21,18 @@ git checkout main
 > git checkout -b yb : '새로운' yb 브랜치를 생성하고 switch한다.
 > git switch yb : '기존' yb브랜치로 switch 한다 .
 
+
+### 브랜치 합치기 ( git merge) 
+
+- 기능 개발이 끝나면 브랜치를 main 브랜치와 합칠 수 있다
+ex) 
+> # 기능 개발이 진행되.
+git commit -m "기능1의 세부 기능1"
+git commit -m "기능1의 세부 기능2"
+git commit -m "기능1 개발 완료"
+
+# 머지를 위해 main 브랜치로 전환
+git switch main
+
+# main 브랜치로 yb 브랜치를 병함
+git merge yb
