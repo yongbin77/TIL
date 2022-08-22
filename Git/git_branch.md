@@ -36,3 +36,15 @@ git switch main
 
 # main 브랜치로 yb 브랜치를 병함
 git merge yb
+
+
+> 실제 프로젝트 개발 시에는 브랜치를 로컬에서 합치기 보다는 Github의 pull request 기능을 이용하여 변경 내역을 충분히 확인하고 난 다음에 머지하는 경우가 더 많기 때문에, 로컬에서 머지하지 않고 feature 브랜치를 push하여 pull request를 요청하는 것을 권장
+
+ex.
+# 기능 개발이 진행
+git commit -m "기능1의 세부 기능1"
+git commit -m "기능1의 세부 기능2"
+git commit -m "기능1 개발 완료"
+# Github 리포지토리로 푸시합니다.
+git push origin yb
+# Github에서 Pull Request를 합니다.
