@@ -63,7 +63,8 @@ pull을 하기전에는 기존에 소스코드들을 commit을 먼저 해놔야 
 ## Github로 Branch & Merge
 
 - 브랜치 목록을 보여줍니다. * 표시로 현재 작업중인 브랜치를 확인할 수 있습니다.
-$ git branch
+
+> git branch
  현재 커밋에서 새로운 브랜치를 생성합니다.
 $ git branch [branch-name]
 
