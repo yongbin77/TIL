@@ -58,3 +58,25 @@ pull을 하기전에는 기존에 소스코드들을 commit을 먼저 해놔야 
 5. 브렌치끼리 이동하는 법
 > git checkout 브렌치이름
 내가 내 브렌치에서 마스터 브렌치로 이동을 하고 싶거나 다른 브렌치로 이동하고싶으면 해당 명령어를 쓰면 된다
+
+
+## Github로 Branch & Merge
+
+ 브랜치 목록을 보여줍니다. * 표시로 현재 작업중인 브랜치를 확인할 수 있습니다.
+$ git branch
+ 현재 커밋에서 새로운 브랜치를 생성합니다.
+$ git branch [branch-name]
+
+ 다른 브랜치로 전환합니다.
+$ git switch [branch-name]
+$ git checkout [branch-name]
+
+ 새로은 브랜치를 생성하고 해당 브랜치로 전환합니다.
+$ git switch -c [branch-name]
+$ git checkout -b [branch-name]
+
+ 현재 브랜치에 특정 브랜치의 히스토리를 병합합니다.
+$ git merge [branch-name]
+
+현재 브랜치의 모든 커밋 히스토리를 보여줍니다.
+$ git log
