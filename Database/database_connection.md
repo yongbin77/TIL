@@ -1,6 +1,8 @@
 ## database와 인텔리제이 연동
 
+### h2 
 ```java
+//application yml에서 설정 
 
 spring: #띄어쓰기 없음
  datasource: #띄어쓰기 2칸
@@ -22,3 +24,4 @@ logging.level: #띄어쓰기 없음
 
 
 ```
+
