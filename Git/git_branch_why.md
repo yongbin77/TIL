@@ -72,3 +72,6 @@ git merge A
 예제2) B라는 branch에다가 C라는 branch를 merge하고 싶다면,
 git checkout B
 git merge A
+
+9. 다른 branch로 이동
+git checkout <branch 이름>
