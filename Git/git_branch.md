@@ -90,7 +90,13 @@ git checkout -b [branch 이름]
 14. 만들었던 가지에서 git pull origin dev-be 
 합쳐진 dev-be의 코드를 받아옴 -> 안전하게 작업위해
 
-15 git switch dev-be
+15. git switch dev-be
 dev-be branch로 이동
 
-16. 
+16. git pull 
+dev-be도 업데이트된 내용 pull
+
+17. git push -d [새로만들었던 가지]
+새로 만든 가지 지우기 ,
+
+
