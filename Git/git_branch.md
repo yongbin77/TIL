@@ -59,3 +59,14 @@ git push origin yb
 팀원이 업데이트한 코드를 받아온다
 
 2. git branch 
+현재의 branch 확인
+
+3. 내가 작성할 코드를 위한 branch 만든다
+git checkout -b [branch 이름]
+
+4. git branch 
+한번 더 내 branch 확인
+
+5. 코드 작성 및 수정
+
+6. 
