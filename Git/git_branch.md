@@ -50,3 +50,12 @@ git commit -m "기능1 개발 완료"
 git push origin yb
 
 - Github에서 Pull Request 진행.
+
+
+## ## Git Team branch 🏋️‍
+
+
+1. git pull 
+팀원이 업데이트한 코드를 받아온다
+
+2. git branch 
