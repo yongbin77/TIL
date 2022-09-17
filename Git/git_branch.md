@@ -69,4 +69,14 @@ git checkout -b [branch 이름]
 
 5. 코드 작성 및 수정
 
-6. 
+6. git add .
+
+7. git commit -m  "커밋할 제목"
+
+8. git push origin [branch 이름]
+현재 내가 쳐논 가지의 branch에 푸쉬한다.
+
+9. 깃허브 사이트 이동
+
+10. PR진행 (Pull & Request)
+11. 
