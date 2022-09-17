@@ -79,4 +79,18 @@ git checkout -b [branch 이름]
 9. 깃허브 사이트 이동
 
 10. PR진행 (Pull & Request)
-11. 
+
+11. Merge 진행 완료 후 레포지토리에서 새로 만들었던 branch 지우기
+
+12. 인텔리제이로 돌아오기
+
+13. git branch 
+현재 branch 위치 확인
+
+14. 만들었던 가지에서 git pull origin dev-be 
+합쳐진 dev-be의 코드를 받아옴 -> 안전하게 작업위해
+
+15 git switch dev-be
+dev-be branch로 이동
+
+16. 
