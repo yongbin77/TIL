@@ -39,38 +39,36 @@ ERD > Entity > Entity attribute
 존재하는 다른 Entity에 의존적인 Entity를 Weak Entity라고 한다.
 그 자식의 속성들에 의해 식별할 수 없는 Entity이다.
 
-Attribute
+### Attribute
 Attribute 는 특성, Entity의 성격, 관계, 또 다른 속성이다.
 
-Multivalued Attribute
+### Multivalued Attribute
 한 값 이상의 값을 가진 Attribute
 
-Derived Attribute
-다른 속성에 기초한 속성
-ERD 에서는 보기 드물다
-
-Relationship
+### Relationship
 Relationship은 Entity간의 상호작용을 표현함
 
-Cadinality and Ordinality
+
 Entity들 간의 관계에 대한 추가 정보
-One to many, many to many 관계를 나타낼 수 있음
 
-여러 기호들로 관계를 표현할 수 있으나, 기호들만 숙지하여도 충분히 표현이 가능하다.
-
-
+### One to many, many to many 관계
 
 One
 일대일 혹은 일대다 관계이다. 주로 하나의 외래키가 걸린 관계라도 보면 된다.
+
 Many
 다대다 관계이다. 중계 테이블을 통하여 여러개의 데이터를 바라보고 있을 때 사용한다.
+
 One (and only one)
 위의 조건과 동일하게 일대일 관계이나, 하나의 row 끼리만 연결된 데이터이다.
+
 Zero or one
 일대일 혹은 일대다 관계를 가지고 있으나, 필수 조건이 아님을 의미한다.
+
 One or many
 일대일 혹은 다대다 관계를 가지고 있음을 의미한다.
 관계를 가지고 있으나, 참조되는 row 값들이 불명확함을 의미한다.
+
 Zero or many
 참조하는 테이블과의 관계가 불명확한 경우이다.
 장바구니처럼 row 생성값이 없을수도, 하나일수도, 여러개일 수도 있는 경우이다.
