@@ -72,6 +72,18 @@ public class SwaggerConfig {
 
 }
 ```
-    
+   
+   저기 위에서
+
+apis 부분에서 'self.study.controller' 부분을
+
+적용하고자 하는 api가 작성된 자신의 컨트롤러 패키지를 지정해주면 됩니다. 이렇게 설정을 하고나서, 서버를 키신 후에
+http://localhost:8080/swagger-ui/index.html
+
+
+여기로 들어가면
+![swagger](https://user-images.githubusercontent.com/99226598/194252094-46d76ae1-edd6-40da-95f4-01cf07e69bf2.png)
+이렇게 스웨거를 통한 
+
       
       
