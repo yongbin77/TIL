@@ -21,14 +21,14 @@ implementation 'io.springfox:springfox-boot-starter:3.0.0'
 
 > 만약에 프로젝트가 실행되지 않고, Swagger NullPointerException 오류가 뜬다면
 
-#### 해결방법 
+### 해결방법 
 application.properties 혹은 application.yml 파일에 가서 아래와 같은 소스코드를 추가한다
 
-# properties 일 경우
+#### properties 일 경우
 spring.mvc.pathmatch.matching-strategy=ant_path_matcher
 
 
-# yml 일 경우
+#### yml 일 경우
 mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
