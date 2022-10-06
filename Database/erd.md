@@ -21,21 +21,21 @@ ERD > Entity > Entity attribute
 ## ERD 사용법
 
 ### 데이터 베이스 모델링
-관계형 DB에서 주로 널리 사용된다.
-엔티티와 속성들을 테이블과 컬럼들로 변환할 수 있다.
-테이블과 관계들을 시각화 할 수 있기 때문에 설계 문제점을 파악할 수 있다.
-소프트웨어 엔지니어링
-소프트웨어 기획 단계에서 사용된다.
-서로 다른 시스템 요소와 서로 간의 관계를 식별하는데 도움된다.
-ERD Notation
+- 관계형 DB에서 주로 널리 사용된다.
+- 엔티티와 속성들을 테이블과 컬럼들로 변환할 수 있다.
+- 테이블과 관계들을 시각화 할 수 있기 때문에 설계 문제점을 파악할 수 있다.
 
+### 소프트웨어 엔지니어링
+- 소프트웨어 기획 단계에서 사용된다.
+- 서로 다른 시스템 요소와 서로 간의 관계를 식별하는데 도움된다.
 
 기본 요소는 Entity, Attribute, Relationship 등이 있다.
 확장하여 Weak Entity, Multivalued Attribute, Weak Relationship 이 있다.
 
-Entity
+### Entity
 어떤 시스템인지에 따라 Entity는 사람, 장소, 사건(이벤트), 오브젝트가 될 수도 있다.
-Weak Entity
+
+### Weak Entity
 존재하는 다른 Entity에 의존적인 Entity를 Weak Entity라고 한다.
 그 자식의 속성들에 의해 식별할 수 없는 Entity이다.
 
