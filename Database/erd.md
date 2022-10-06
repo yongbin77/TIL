@@ -1,4 +1,8 @@
-Entity Relationship Diagram
+
+![전체적이 erd](https://user-images.githubusercontent.com/99226598/194429786-d6ec6c97-4ca1-48eb-b0c4-2e65b7d1de4e.png)
+
+
+## Entity Relationship Diagram
 개체-관계 모델. 테이블간의 관계를 설명해주는 다이어그램이라고 볼 수 있으며, 이를 통해 프로젝트에서 사용되는 DB의 구조를 한눈에 파악할 수 있다.
 즉, API를 효율적으로 뽑아내기 위한 모델 구조도라고 생각하면 된다.
 
