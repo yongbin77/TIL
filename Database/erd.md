@@ -10,11 +10,11 @@
 
 
 
-Entity 란?
+#### Entity 란?
 테이블을 구성하는 객체 구성성분
-ex) 항해99라는 Data에 크루원과 매니저의 Entity가 있다고 가정해보자
-크루원(Entity)는 이름, 나이, 생일 등의 속성(attributes) 값으로 구성된 Entity 이다.
-구성관계
+ex.크루원(Entity)는 이름, 나이, 생일 등의 속성(attributes) 값으로 구성된 Entity 이다.
+
+#### 구성관계
 ERD > Entity > Entity attribute
 이 Entity 들의 논리적인 관계를 시각적으로 잘 알아보기위해 기호를 사용하여 표기한다.
 ERD 사용법
