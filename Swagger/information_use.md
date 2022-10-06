@@ -19,13 +19,10 @@ implementation 'io.springfox:springfox-boot-starter:3.0.0'
 
 디펜던시 추가 후에 코끼리를 눌러서 디펜던시 적용을 시켜주고, 프로젝트 실행
 
-> 만약에 프로젝트가 실행되지 않고, Swagger NullPointerException 오류가 뜨시는 분들은
+> 만약에 프로젝트가 실행되지 않고, Swagger NullPointerException 오류가 뜬다면
 
-​
-
-application.properties 혹은 application.yml 파일에 가셔서
-
-아래와 같은 소스코드를 추가해줍니다.
+#### 해결방법 
+application.properties 혹은 application.yml 파일에 가서 아래와 같은 소스코드를 추가한다
 
 # properties 일 경우
 spring.mvc.pathmatch.matching-strategy=ant_path_matcher
@@ -35,3 +32,6 @@ spring.mvc.pathmatch.matching-strategy=ant_path_matcher
 mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+      
+      
+      
