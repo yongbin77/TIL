@@ -38,3 +38,6 @@ spring:
     username: (user명)
     password: (password)
 ```
+
+## 중요!  Mysql 계정 및 권한 설정 , connection에 따른 스키마 설정  
+https://mystyle1057.tistory.com/entry/MySQL-Workbench-%EC%82%AC%EC%9A%A9%EC%9E%90-%EA%B3%84%EC%A0%95-%EC%83%9D%EC%84%B1%EA%B6%8C%ED%95%9C-%EB%B6%80%EC%97%AC-%EB%B0%A9%EB%B2%95
