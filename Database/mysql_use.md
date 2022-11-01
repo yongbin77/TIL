@@ -37,6 +37,8 @@ spring:
     url: jdbc:mysql://localhost:(MySQL의 포트번호)/(DB이름)?serverTimezone=Asia/Seoul
     username: (user명)
     password: (password)
+    
+    ()에 알맞는 값을 대입할떄, () 제거해야함
 ```
 
 ## 중요!  Mysql 계정 및 권한 설정 , connection에 따른 스키마 설정  
