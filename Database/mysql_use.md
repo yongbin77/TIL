@@ -20,12 +20,21 @@ metadata는 data about data , 즉 데이터 속에 데이터(data about data)다
 ----
 
 
-Mysql 인텔리제이 사용
+### Mysql 인텔리제이 사용
 
-
-bulid.gradle에 Mysql 주입할떄
+#### bulid.gradle에 설정
 
 ```java
 runtimeOnly 'mysql:mysql-connector-java'
 // runtimeOnly : 컴파일할떄 mysql사용 하는것이 아닌 실행시점에 사용한다는 뜻
 ```
+
+#### application.yml
+```java
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:(MySQL의 포트번호)/(DB이름)?serverTimezone=Asia/Seoul
+    username: (user명)
+    password: (password)
+    ```
