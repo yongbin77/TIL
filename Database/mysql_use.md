@@ -17,3 +17,15 @@ metadata는 data about data , 즉 데이터 속에 데이터(data about data)다
 >스키마는 데이터베이스를 설계할 때 정해지며 한번 정해지면 자주 바뀌지 않는다.
 속성(attribute ) 등 다양한 내용이 기술 
 
+----
+
+
+Mysql 인텔리제이 사용
+
+
+bulid.gradle에 Mysql 주입할떄
+
+```java
+runtimeOnly 'mysql:mysql-connector-java'
+// runtimeOnly : 컴파일할떄 mysql사용 하는것이 아닌 실행시점에 사용한다는 뜻
+```
