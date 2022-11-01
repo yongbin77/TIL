@@ -15,4 +15,5 @@ metadata는 data about data , 즉 데이터 속에 데이터(data about data)다
 
 >Schema : 데이터베이스의 구조를 기술
 >스키마는 데이터베이스를 설계할 때 정해지며 한번 정해지면 자주 바뀌지 않는다.
+속성(attribute ) 등 다양한 내용이 기술 
 
