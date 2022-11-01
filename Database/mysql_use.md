@@ -37,4 +37,4 @@ spring:
     url: jdbc:mysql://localhost:(MySQL의 포트번호)/(DB이름)?serverTimezone=Asia/Seoul
     username: (user명)
     password: (password)
-    ```
+```
