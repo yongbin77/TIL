@@ -61,3 +61,8 @@ ex. int x = 10 ; short = x ; -> short로 바꿔주려면 short x = (short) x;
 + 연산에서의 문자열 자동타입변환
 -> + 붙여져있으면 순선대로 진행
 ex. String str = 10 + 2 ; // 를 출력하면 12  , String str = 10 + "2" + 4 ; 를 출력하면 1024 
+
+
+#### 문자열을 기본타입으로 변환
+
+String str = "30000" -> 기본타입으로 변환하라면 int value = Interger.parseInt(str);
