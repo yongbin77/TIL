@@ -65,4 +65,4 @@ ex. String str = 10 + 2 ; // 를 출력하면 12  , String str = 10 + "2" + 4 ; 
 
 #### 문자열을 기본타입으로 변환
 
-String str = "30000" -> 기본타입으로 변환하라면 int value = Interger.parseInt(str);
+ex. String str = "30000" -> 기본타입으로 변환하라면 int value = Interger.parseInt(str);
