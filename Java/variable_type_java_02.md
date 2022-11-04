@@ -66,3 +66,9 @@ ex. String str = 10 + 2 ; // 를 출력하면 12  , String str = 10 + "2" + 4 ; 
 #### 문자열을 기본타입으로 변환
 
 ex. String str = "30000" -> 기본타입으로 변환하라면 int value = Interger.parseInt(str);
+
+#### 변수와 시스템출력 및 입력
+출력은 -> sysout , 입력은 -> System.in.read();을 이용하면됨\
+입력이란 키보드에 입력된 내용을 변수에 저장하는 것, system.in의 단점은 키코드를 하나씩 읽기떄문에 2개 이상의 키가 조합된 한글을 읽을 수 없다.
+키보드로부터 입력된 내용을 통 문자열로 읽지 못하는 단점을 보완하기 위해 'Scanner클래스' 제공 
+변수와 시스템 출력에서 알아야 할 부분은 System.in.read() / Scannner scanner = new Scanner (System.in);
