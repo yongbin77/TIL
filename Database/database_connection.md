@@ -6,7 +6,7 @@
 
 spring: #띄어쓰기 없음
  datasource: #띄어쓰기 2칸
-   url: jdbc:h2:tcp://localhost/~/kybdatabase #4칸     // 이곳에 기존에 내가 만들어놓은 database와 연동한다. 
+   url: jdbc:h2:tcp://localhost/~/~~~~ #4칸
    username: sa 
    password:
    driver-class-name: org.h2.Driver
