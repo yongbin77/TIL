@@ -16,7 +16,7 @@
 
 5.Github repository랑 내 로컬 프로젝트랑 연결
 
-> git remote add origin https://github.com/yongbin77/TIL.git  //예시 
+> git remote add origin ~~~~~~  //예시 
 이 명령어는 github에서 복사해서 붙여와야함 
 
 6. 잘 연결됐는지 확인 (선택사항)
